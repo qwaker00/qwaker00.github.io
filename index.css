@@ -1,0 +1,428 @@
+body {
+    background-color: #F6F5F3;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+#page {
+    font: normal 100% Helvetica, Arial, sans-serif;
+    margin: 0 auto;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: red;
+}
+
+.header {
+    border-bottom: 1px solid #c5c8d0;
+    background: white;
+    padding: 1em;
+    overflow: auto;
+    clear: both;
+}
+
+img {
+    display: block;
+}
+
+#logo {
+    float: left;
+}
+
+#share-buttons {
+    float: right;
+}
+
+#share-buttons img {
+    width: 35px;
+    padding: 0.25em;
+    border: 0;
+    box-shadow: 0;
+    display: inline;
+}
+
+ul.menu {
+    font-size: 1em;
+    border-bottom: 1px solid #c5c8d0;
+    clear: both;
+    border-collapse: collapse;
+    background: white;
+    padding: 0 1em;
+    margin: 0;
+
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,.1),0 3px 4px -3px rgba(0,0,0,.3);
+}
+
+.menu li {
+    padding: 0.5em 0;
+    margin-right: 0.5em;
+    border-top: solid 2px white;
+    display: inline-block;
+    list-style: none;
+    color: blue;
+}
+
+.menu li.active {
+    border-top: solid 2px black;
+    color: black;
+}
+
+
+table.footer {
+    width: 100%;
+    border-top: 1px solid #c5c8d0;
+    clear: both;
+    font-size: 80%;
+    border-collapse: collapse;
+}
+
+.footer td {
+    color: gray;
+    width: 33%;
+    padding: 0.2em 1em;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+.footer td a {
+    color: gray;
+}
+
+
+#request_table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0.2em 0.5em;
+}
+
+#request_table td {
+    padding: 0;
+    margin: 0;    
+}
+
+#request_table tr td:first-child {
+    width: 100%;
+}
+
+.main {
+    background: white;
+    border: 1px solid #c5c8d0;
+    margin: 1em;
+    padding: 1em;
+    width: 67%;
+    margin-right: 1%;
+    margin-left: 2%;
+    float: left;
+
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,.1),0 3px 4px -3px rgba(0,0,0,.3);
+}
+.ask {
+    width: 25%;
+    float: left;
+}
+
+.box {
+    background: white;
+    border: 1px solid #c5c8d0;
+    margin: 1em;
+    margin-left: 1%;
+    margin-right: 0;
+    padding: 1em;
+
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,.1),0 3px 4px -3px rgba(0,0,0,.3);
+}
+
+
+input {
+    padding: 0.15em;
+    margin: 0;
+}
+
+select {
+    padding: 0.15em;
+    width: 130px;
+}
+.arrow_right:before {
+    content: "→";
+}
+.arrow_left:before {
+    content: "←";
+}
+
+#cat_of_day_image {
+    max-width: 100%;
+    padding: 2px;
+}
+
+input[type=submit] {
+    background: white;
+    border: 0;
+    cursor: pointer;
+    padding: 0.2em;
+}
+#arrow_holder_cell {
+    vertical-align: middle;
+    text-align: center;
+}
+#arrow_holder {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    margin-top: -5px;
+}
+.arrow_right {
+    font: normal 170%/10px Helvetica, Arial, sans-serif;
+}
+.arrow_left {
+    position: absolute;
+    font-size: 90%;
+    top: 5px;
+    color: gray;
+    left: 20%;
+}
+
+form {
+    margin: 0;
+}
+
+#loading {
+    display: none;
+    position: absolute;
+    top: 15%;
+    left: 40%;
+}
+
+.relative {
+    position: relative;
+}
+
+#request_input_row {
+    display: table-row;
+    width: 100%;
+}
+
+#request_input_table {
+    display: table;
+    width: 100%;
+}
+#request_input_cell {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+}
+#request_submit_cell {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #c5c8d0
+}
+#request_paste_cell {
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    border: 1px solid #c5c8d0;
+    padding: 0.2em;
+    cursor: pointer;
+    width: 16px;
+}
+
+#request_input {
+    width: 100%;
+}
+
+#request_paste {
+    height: 16px;
+}
+
+
+.variant {
+    border: 1px solid #c5c8d0;
+    margin-top: 10px;
+    padding: 5px; 
+    text-align: left;
+}
+
+.variant_main {
+    margin-bottom: 5px;
+}
+
+.variant .variant_main > .text {
+    font-size: 120%;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.variant .ts {
+    font-size: 110%;
+    color: gray;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.variant .pos {
+    font-size: 90%;
+    font-style: italic;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.variant .variant_trans {
+    margin-left: 20px;
+}
+
+.variant .translation {
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.variant .translation .text {
+    font-size: 100%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.variant .translation .text:hover {
+    text-decoration: underline;
+}
+
+
+.variant .translation .examples{
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.variant .translation .examples .ex {
+    color: gray;
+}
+
+.ask .variants a {
+    color: blue;
+}
+
+.explanation {
+    color: gray;
+	font-style: italic;	
+}
+
+.say {
+    display: inline-block;
+    width: 16px;
+    line-height: 16px;
+    background: url('img/sound.png');
+    cursor: pointer;
+    color: transparent;
+}
+
+@media only screen and (max-width: 991px) {
+.main {
+    width: initial;
+    float: none;
+    margin: 1em 2% 1em 2%;
+}
+.ask {
+    width: initial;
+    float: none;
+}
+.box {
+    margin: 1em 2% 1em 2%;
+}
+}
+
+@media only screen and (max-width: 479px) {
+#share-buttons {
+    float: none;
+}                   
+#logo {
+    float: none;
+}
+#arrow_holder_row {
+    display: table-row;
+    width: 100%;
+    height: 30px;
+}
+#arrow_holder_cell {
+    display: table-cell;
+}
+#table_from_to {
+    display: table;
+    width: 100%;
+}
+#langs_from {
+    display: block;
+    width: 100%;
+}
+#langs_to {
+    display: block;
+    width: 100%;
+}
+.arrow_right {
+    font: normal 200%/10px Helvetica, Arial, sans-serif;
+}
+.arrow_left {
+    font-size: 110%;
+    left: -5px;
+    top: -5px;
+}          
+#request_submit{
+    clear: left;
+}
+.variant {
+    border: 0;
+    padding: 0;
+    border: 0;
+    margin-bottom: 20px;
+}
+.variant_main {
+    border-left: 1px solid #c5c8d0;
+    border-right: 1px solid #c5c8d0;
+    border-top: 1px solid #c5c8d0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.variant .variant_trans {
+    margin-top: 0;
+    margin-left: 0;
+    padding: 0 5px;
+    border: 1px solid #c5c8d0;
+}
+.variant .translation .examples .ex {
+    margin-top: 5px;
+}
+.main {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0.5em;
+}
+.arrow_right:before {
+    content: "↓";
+}
+.arrow_left:before {
+    content: "↑";
+}
+.box {
+    margin-right: 0;
+    margin-left: 0;
+}
+}
+

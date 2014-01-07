@@ -1,0 +1,121 @@
+<!doctype>
+<html>
+<head>
+    <title>Электронный словарь :: Abacaba inovations</title>
+
+    <script src="jquery.js" charset="UTF-8"></script>
+    <script src="index.js" charset="UTF-8"></script>
+
+    <link href="img/favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="index.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+</head>
+<body onload="javascript:init();">
+    <div id="page">
+        <div class="header">
+            <div id="logo">
+                <img src="img/index.png" alt="Abacaba inovations">
+            </div>
+            <div id="share-buttons">
+                <a href="http://www.facebook.com/sharer.php?u=http://goo.gl/dR16xz" target="_blank"><img title="Поделиться ссылкой через Facebook" src="img/facebook.png" alt="Facebook" /></a>
+                <a href="http://twitter.com/share?url=http://goo.gl/dR16xz&text=Зацени новый клёвый словарь!" target="_blank"><img title="Поделиться ссылкой через Twitter" src="img/twitter.png" alt="Twitter" /></a>
+                <a href="https://plus.google.com/share?url=http://goo.gl/dR16xz" target="_blank"><img title="Поделиться ссылкой через Google+" src="img/google.png" alt="Google+" /></a>
+                <a href="mailto:?Subject=Зацени новый клёвый словарь!&Body=Я%20увидел%20это%20и%20подумал%20о%20тебе!%20 http://goo.gl/dR16xz" target="_blank"><img title="Поделиться ссылкой через электронную почту" src="img/email.png" alt="Email" /></a>
+            </div>
+        </div>
+
+        <ul class="menu">
+            <li class="active"><a href="index.html">Словарь</a></li>
+            <li><a href="about.html">О компании</a></li>
+        </ul>
+
+        <div class="main">
+            <form onsubmit="javascript:return false;">
+                <table id="request_table">
+                    <tr>
+                    <td colspan="3">
+                        <div id="langs_choose">
+                            <span>Выбор языка:</span>
+                            <span id="table_from_to">
+                                <select id="langs_from"></select>
+                                <span id="arrow_holder_row">
+                                    <span id="arrow_holder_cell">
+                                        <span id="arrow_holder">
+                                            <span class="arrow_right"></span>
+                                            <span class="arrow_left"></span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <select id="langs_to"></select>
+                            </span>
+                        </div>
+                    </td>
+                    </tr>
+
+                    <tr id="request_row">
+                    <td colspan="3">
+                        <span id="request_input_table">
+                            <span id="request_input_row">
+                                <span id="request_input_cell">
+                                    <input id="request_input" name="query" type="text">
+                                </span>
+                                <span id="request_paste_cell">
+                                    <img id="request_paste" src="img/paste.png" title="Вставить из буфера обмена (НЕ РАБОТАЕТ)">
+                                </span>
+                                <span id="request_submit_cell" class="relative">
+                                    <input id="request_submit" title="Произвести перевод" type="submit" value="Перевести" onclick="javascript:request();">
+                                    <img src="img/loading.gif" id="loading">
+                                </span>
+                            </span>
+                        </span>
+                    </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="3">
+                            <div id="response">
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+            </form>
+        </div>
+
+        <div class="ask">
+            <div class="box">
+                <div>Переводы дня:
+                <div class="variants">
+                    <div><a href="index.html?query=schwein&lang=de-ru">schwein</a></div>
+                    <div><a href="index.html?query=to%20be%20or%20not%20to%20be&lang=en-ru">to be or not to be</a></div>
+                    <div><a href="index.html?query=Париж&lang=ru-fr">Париж</a></div>
+                    <div><a href="index.html?query=capital&lang=en-fr">capital</a></div>
+                </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div>Пословицы дня:</div>
+                <div class="variants" id="phrase_of_day">
+                </div>
+            </div>
+
+            <div class="box">
+                <div>Котятки дня:</div>
+                <div class="variants" id="cat_of_day">                
+                </div>
+            </div>
+        </div>
+
+        <table class="footer">
+        <tr>
+            <td class="left"><a href="http://api.yandex.ru/dictionary/">Реализовано с помощью сервиса "Яндекс.Словарь"</a></td>
+            <td class="center">Abacaba innovations</td>
+            <td class="right">© 2013</td>
+        </tr>
+        </table>
+    </div>
+</body>
+</html>

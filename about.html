@@ -1,0 +1,75 @@
+<html>
+<head>
+    <title>О компании :: Abacaba inovations</title>
+
+    <link href="img/favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="index.css" />
+
+    <script src="jquery.js" charset="UTF-8"></script>
+    <script src="index.js" charset="UTF-8"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body onload="javascript:init();">
+    <div id="page">
+        <div class="header">
+            <div id="logo">
+                <img src="img/index.png" alt="Abacaba inovations">
+            </div>
+            <div id="share-buttons">
+                <a href="http://www.facebook.com/sharer.php?u=http://goo.gl/dR16xz" target="_blank"><img title="Поделиться ссылкой через Facebook" src="img/facebook.png" alt="Facebook" /></a>
+                <a href="http://twitter.com/share?url=http://goo.gl/dR16xz&text=Зацени новый клёвый словарь!" target="_blank"><img title="Поделиться ссылкой через Twitter" src="img/twitter.png" alt="Twitter" /></a>
+                <a href="https://plus.google.com/share?url=http://goo.gl/dR16xz" target="_blank"><img title="Поделиться ссылкой через Google+" src="img/google.png" alt="Google+" /></a>
+                <a href="mailto:?Subject=Зацени новый клёвый словарь!&Body=Я%20увидел%20это%20и%20подумал%20о%20тебе!%20 http://goo.gl/dR16xz" target="_blank"><img title="Поделиться ссылкой через электронную почту" src="img/email.png" alt="Email" /></a>
+            </div>
+        </div>
+
+        <ul class="menu">
+            <li><a href="index.html">Словарь</a></li>
+            <li class="active"><a href="about.html">О компании</a></li>
+        </ul>
+
+
+        <div class="main">
+            <div class="about">
+                Наша компания пока не очень велика, но очень перспективна. Буквально вчера нас еще не было, а теперь мы динамично развиваемся и движемся к своей цели.
+            </div>
+        </div>
+
+
+        <div class="ask">
+            <div class="box">
+                <div>Переводы дня:
+                <div class="variants">
+                    <div><a href="index.html?query=schwein&lang=de-ru">schwein</a></div>
+                    <div><a href="index.html?query=to%20be%20or%20not%20to%20be&lang=en-ru">to be or not to be</a></div>
+                    <div><a href="index.html?query=Париж&lang=ru-fr">Париж</a></div>
+                    <div><a href="index.html?query=capital&lang=en-fr">capital</a></div>
+                </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div>Пословицы дня:</div>
+                <div class="variants" id="phrase_of_day">
+                </div>
+            </div>
+
+            <div class="box">
+                <div>Котятки дня:</div>
+                <div class="variants" id="cat_of_day">                
+                </div>
+            </div>
+        </div>
+
+        <table class="footer">
+        <tr>
+            <td class="left"><a href="http://api.yandex.ru/dictionary/">Реализовано с помощью сервиса "Яндекс.Словарь"</a></td>
+            <td class="center">Abacaba innovations</td>
+            <td class="right">© 2013</td>
+        </tr>
+        </table>
+    </div>
+</body>
+</html>
