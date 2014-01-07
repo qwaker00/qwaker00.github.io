@@ -336,12 +336,12 @@ form {
 
 @media only screen and (max-width: 991px) {
 .main {
-    width: initial;
+    width: auto;
     float: none;
     margin: 1em 2% 1em 2%;
 }
 .ask {
-    width: initial;
+    width: auto;
     float: none;
 }
 .box {
