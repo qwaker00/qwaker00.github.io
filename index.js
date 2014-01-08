@@ -94,6 +94,7 @@ function requestTranslation(text, lang) {
                     } else {
                         output.children().filter('div').remove();
                         $('<div/>', {class : 'error'}).text('Простите, но мы не знаем перевод этого слова').appendTo(output);        
+			            $('<div/>', {class: 'add_own', text: 'Добавить свой вариант перевода'}).click(function(){ return add_own(text);}).appendTo(output);
                         hideLoading();
                     }
                 }
