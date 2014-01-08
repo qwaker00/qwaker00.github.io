@@ -57,7 +57,15 @@ ul.menu {
     padding: 0 1em;
     margin: 0;
 
-    box-shadow: 1px 1px 1px 1px rgba(0,0,0,.1),0 3px 4px -3px rgba(0,0,0,.3);
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,.1),0 3px 4px -3px rgba(0,0,0,.1);
+}
+
+.add_own {
+	font-style: italic;
+	font-size: 80%;
+	cursor: pointer;
+	margin-top: 1em;
+	color: gray;
 }
 
 .menu li {
@@ -131,7 +139,7 @@ table.footer {
     margin-left: 2%;
     float: left;
 
-    box-shadow: 1px 1px 1px 1px rgba(0,0,0,.1),0 3px 4px -3px rgba(0,0,0,.3);
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,.1),0 3px 4px -3px rgba(0,0,0,.1);
 }
 .ask {
     width: 25%;
@@ -146,7 +154,7 @@ table.footer {
     margin-right: 0;
     padding: 1em;
 
-    box-shadow: 1px 1px 1px 1px rgba(0,0,0,.1),0 3px 4px -3px rgba(0,0,0,.3);
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,.1),0 3px 4px -3px rgba(0,0,0,.1);
 }
 
 

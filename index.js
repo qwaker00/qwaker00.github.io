@@ -24,6 +24,12 @@ function sayIt(s) {
     $('<embed temp="true" loop="false" autostart="true" hidden="true" src="http://tts-api.com/tts.mp3?q=' + encodeURI($(this).attr('phrase')) + '"/>').appendTo('body');
 }
 
+function add_own(w) {
+	if (prompt('Введите свой вариант перевода слова "' + w + '"', "")) {
+		alert("Спасибо! Ваш вариант перевода принят на рассмотрение!");
+	}
+}
+
 function requestTranslation(text, lang) {
     var output = $('#response');
     $.get('https://dictionary.yandex.net/api/v1/dicservice.json/lookup?key=' + encodeURI(myLittleKey) + '&lang=' + encodeURI(lang) + '&ui=ru&text=' + encodeURI(text),
@@ -45,7 +51,7 @@ function requestTranslation(text, lang) {
                     if (def.ts)
                         $('<div/>', {class: 'ts'}).text('[' + def.ts + ']').appendTo(main);
 
-                    if (lang.substring(0, 2) == 'en') $('<div/>', {class: 'say', 'phrase': def.text}).text('.').click(sayIt).appendTo(main);
+                    if (lang.substring(0, 2) == 'en') $('<div/>', {title: "Произнести", class: 'say', 'phrase': def.text}).text('.').click(sayIt).appendTo(main);
 
                     if (def.pos)
                         $('<div/>', {class: 'pos'}).text(def.pos).appendTo(main);
@@ -75,6 +81,8 @@ function requestTranslation(text, lang) {
                         }
                     }
                 }
+                $('<div/>', {class: 'add_own', text: 'Добавить свой вариант перевода'}).click(function(){ return add_own(text);}).appendTo(output);
+
                 hideLoading();
             } else {
                 $.get('https://translate.yandex.net/api/v1.5/tr.json/translate?key=' + encodeURI(mySecondKey) + '&lang=' + lang.substring(3, 5) + '&format=plain&options=1&text=' + encodeURI(text),
@@ -424,7 +432,6 @@ var catsOfDay = ['http://img.izifunny.com/pics/20120409/640/kittens-100-pics_67.
 'http://cs309922.userapi.com/v309922180/1994/vGkquP9-QTA.jpg',
 'http://gl00.weburg.net/00/news/5/21490/bigposter/424049.jpg',
 'http://www.motto.net.ua/images/201209/motto.net.ua_9351.jpg',
-'http://img.aledemoty.pl/v2/a6/09/a609939f-b8a4-48a0-8553-1bca418bbd4f.jpg',
 'http://funzoo.ru/uploads/posts/2011-04/thumbs/1303930703_presents_cat015.jpg',
 'http://cats.firefun.ru/images/gallery/thumbs_cache/08/08880-1246514040_hiop_ru_cats_11-cats.firefun.ru.jpg',
 'http://crunchpost.com/wp-content/uploads/2011/08/baby-animal-photography-24.jpg',
